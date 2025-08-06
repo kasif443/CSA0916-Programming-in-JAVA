@@ -1,0 +1,19 @@
+public class R192424214 {
+    public static void main(String[] args) {
+        int[] numbers = {10, -5, 0, 23, -8, -15, 7, 42, -3};
+
+        int positiveCount = 0;
+        int negativeCount = 0;
+
+        for (int num : numbers) {
+            if (num > 0) {
+                positiveCount++;
+            } else if (num < 0) {
+                negativeCount++;
+            }
+        }
+
+        System.out.println("Total Positive Numbers: " + positiveCount);
+        System.out.println("Total Negative Numbers: " + negativeCount);
+    }
+}
