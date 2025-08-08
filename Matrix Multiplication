@@ -1,0 +1,24 @@
+import java.io.*;
+public class MatrixMultiplication {
+    public static void main(String[] args) {
+        int matrix1[][] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+        int matrix2[][] = { {9, 8, 7}, {6, 5, 4}, {3, 2, 1} };
+        int product[][] = new int[3][3];
+        int i, j, k;
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+                product[i][j] = 0; 
+                for (k = 0; k < 3; k++) {
+                    product[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+        System.out.println("Matrix Multiplication Result:");
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+                System.out.print(product[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
