@@ -1,0 +1,20 @@
+public class ReversePalindrome {
+    public static void main(String[] args) {
+        int palindrome = 121; // You can change this to any palindrome number
+        int reversed = reverseNumber(palindrome);
+        int sum = palindrome + reversed;
+        System.out.println("Original palindrome number: " + palindrome);
+        System.out.println("Reversed number: " + reversed);
+        System.out.println("Sum: " + sum);
+    }
+    public static int reverseNumber(int num) {
+        int reversed = 0;
+   while (num > 0) {
+            int digit = num % 10;         
+            reversed = reversed * 10 + digit; 
+            num = num / 10;               
+        }
+
+        return reversed;
+    }
+}
